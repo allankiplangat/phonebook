@@ -25,4 +25,14 @@ class PhoneBook:
             return False
         return True
 
+    def view_contact(self):
+        contact_list = []
+        if len(self.contacts) == 0:
+            return "There is no contacts in the phonebook"
+        else:
+            for key, value in self.contacts.items():
+                contact_list.append((key, value))
+        
+        return contact_list
+
     

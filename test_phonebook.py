@@ -17,3 +17,8 @@ class PhonebookTest(unittest.TestCase):
     def test_delete_contact(self):
         self.phonebook.add_contact()
         self.assertTrue(self.phonebook.delete_contact('Allan'))
+
+    def test_view_contact(self):
+        self.phonebook.add_contact()
+        self.assertEqual([('Allan', '0718150768')], self.phonebook.view_contact())
+        
