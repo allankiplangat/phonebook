@@ -1,7 +1,6 @@
 import unittest
 from app import Phonebook
 
-
 class PhonebookTest(unittest.TestCase):
     def test_create_phonebook(self):
         phonebook = Phonebook()
