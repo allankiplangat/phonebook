@@ -12,3 +12,7 @@ class PhoneBook:
         
         return self.contacts[self.username]
     
+    def update_contact(self, name, phone_number):
+        self.contacts[name] = phone_number
+        return self.contacts.get(name)
+    
