@@ -15,4 +15,14 @@ class PhoneBook:
     def update_contact(self, name, phone_number):
         self.contacts[name] = phone_number
         return self.contacts.get(name)
+
+    def delete_contact(self, name):
+        if self.contacts[name]:
+            del self.contacts[name]
+        else:
+            raise KeyError
+        if name in self.contacts:
+            return False
+        return True
+
     
